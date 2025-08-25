@@ -1,0 +1,291 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+#mainBox {
+  max-width: 1500px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.head {
+  background-color: #065f46;
+  color: #f9fafb;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.head h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: #065f46;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover {
+  color: #047857;
+}
+
+ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-direction: row;
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+}
+
+.left-section {
+  background-color: #f0fdf4;
+}
+
+.left-section h1 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #065f46;
+  font-weight: bold;
+}
+
+.left-section span {
+  display: block;
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.right-section h3 {
+  margin-top: 0;
+  color: #065f46;
+}
+
+.btn_field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn_field button {
+  padding: 0.8rem 1.5rem;
+  background-color: #facc15;
+  border: none;
+  border-radius: 8px;
+  color: #1f2937;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn_field button:hover {
+  background-color: #eab308;
+  transform: translateY(-2px);
+}
+
+.border {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #facc15;
+  background: #fefce8;
+  border-radius: 8px;
+}
+
+.border h3 {
+  margin-top: 0;
+}
+
+.about-section,
+.inquiry-section,
+.faq-section,
+.contact-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 2px solid #e5e7eb;
+}
+
+.about-section h2,
+.inquiry-section h2,
+.faq-section h2,
+.contact-section h2,
+.about-section h3 {
+  color: #065f46;
+  margin-top: 0;
+}
+
+.about-box,
+.faq-box,
+.terms-box {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.about-box p,
+.terms-box p,
+.faq-box p {
+  margin: 0.5rem 0;
+}
+
+.about-box ul,
+.terms-box ul,
+.faq-box ul {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.main-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer {
+  background-color: #f9fafb;
+  color: #374151;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #065f46;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.toggle-button {
+  margin-left: 10px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #facc15;
+  background: transparent;
+  color: #facc15;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #facc15;
+  color: #1f2937;
+}
+
+button:focus,
+.toggle-button:focus {
+  outline: none;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .section,
+  .main-about {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section,
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+}
+

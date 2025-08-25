@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signature Over BIG Printed Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    #signature-pad {
+      border: 2px solid #333;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    input {
+      padding: 10px;
+      width: 300px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .clear-btn {
+      background-color: #e74c3c;
+      color: white;
+    }
+    .save-btn {
+      background-color: #2ecc71;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Signature Over BIG Printed Name (Very Near)</h2>
+  <input type="text" id="name" placeholder="Enter your name" /><br />
+  <canvas id="signature-pad" width="400" height="150"></canvas><br />
+  <button class="clear-btn" id="clear">Clear</button>
+  <button class="save-btn" id="save">Save</button>
+
+  <!-- Signature Pad library -->
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script>
+    const canvas = document.getElementById('signature-pad');
+    const signaturePad = new SignaturePad(canvas);
+
+    document.getElementById('clear').addEventListener('click', () => {
+      signaturePad.clear();
+    });
+
+    document.getElementById('save').addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim();
+      if (!name) {
+        alert("Please enter your name first.");
+        return;
+      }
+      if (signaturePad.isEmpty()) {
+        alert("Please provide a signature first.");
+        return;
+      }
+
+      // Create new canvas for combined image
+      const width = 500;
+      const height = 250; // Adjusted to allow big name and close signature
+      const combinedCanvas = document.createElement('canvas');
+      combinedCanvas.width = width;
+      combinedCanvas.height = height;
+      const ctx = combinedCanvas.getContext('2d');
+
+      // Fill background white
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, 0, width, height);
+
+      // Load signature image
+      const signatureData = signaturePad.toDataURL('image/png');
+      const signatureImage = new Image();
+      signatureImage.onload = function() {
+        // Adjust sizes
+        const sigWidth = 250;
+        const sigHeight = 80;
+        const sigX = (width - sigWidth) / 2;
+
+        // Big name settings
+        const nameFontSize = 35;
+        const nameY = height - 40; // Position for the name
+
+        // Position signature just above the name
+        const sigY = nameY - sigHeight + 5; // Very near (5 px overlap if needed)
+
+        // Draw signature
+        ctx.drawImage(signatureImage, sigX, sigY, sigWidth, sigHeight);
+
+        // Draw big name centered
+        ctx.fillStyle = "#000";
+        ctx.font = ` ${nameFontSize}px Arial`;
+        ctx.textAlign = "center";
+        ctx.fillText(name, width / 2, nameY);
+
+        // Export
+        const finalDataURL = combinedCanvas.toDataURL('image/png');
+
+        // Download
+        const link = document.createElement('a');
+        link.href = finalDataURL;
+        link.download = 'signature_over_big_name.png';
+        link.click();
+      };
+      signatureImage.src = signatureData;
+    });
+  </script>
+</body>
+</html>
