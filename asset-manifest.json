@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/vehicle-sticker-system/static/css/main.d63cb80e.css",
-    "main.js": "/vehicle-sticker-system/static/js/main.7117204a.js",
-    "static/js/213.dd2511d3.chunk.js": "/vehicle-sticker-system/static/js/213.dd2511d3.chunk.js",
-    "static/js/455.031cc7da.chunk.js": "/vehicle-sticker-system/static/js/455.031cc7da.chunk.js",
-    "static/js/453.68d2f560.chunk.js": "/vehicle-sticker-system/static/js/453.68d2f560.chunk.js",
-    "static/media/DEBES.jpg": "/vehicle-sticker-system/static/media/DEBES.25b71e4262ffe1b088d7.jpg",
-    "static/media/logo.jpg": "/vehicle-sticker-system/static/media/logo.25b71e4262ffe1b088d7.jpg",
-    "index.html": "/vehicle-sticker-system/index.html",
-    "main.d63cb80e.css.map": "/vehicle-sticker-system/static/css/main.d63cb80e.css.map",
-    "main.7117204a.js.map": "/vehicle-sticker-system/static/js/main.7117204a.js.map",
-    "213.dd2511d3.chunk.js.map": "/vehicle-sticker-system/static/js/213.dd2511d3.chunk.js.map",
-    "455.031cc7da.chunk.js.map": "/vehicle-sticker-system/static/js/455.031cc7da.chunk.js.map",
-    "453.68d2f560.chunk.js.map": "/vehicle-sticker-system/static/js/453.68d2f560.chunk.js.map"
+    "main.css": "/vehicle_sticker_system/static/css/main.d63cb80e.css",
+    "main.js": "/vehicle_sticker_system/static/js/main.0dcbe555.js",
+    "static/js/213.dd2511d3.chunk.js": "/vehicle_sticker_system/static/js/213.dd2511d3.chunk.js",
+    "static/js/455.031cc7da.chunk.js": "/vehicle_sticker_system/static/js/455.031cc7da.chunk.js",
+    "static/js/453.68d2f560.chunk.js": "/vehicle_sticker_system/static/js/453.68d2f560.chunk.js",
+    "static/media/DEBES.jpg": "/vehicle_sticker_system/static/media/DEBES.25b71e4262ffe1b088d7.jpg",
+    "static/media/logo.jpg": "/vehicle_sticker_system/static/media/logo.25b71e4262ffe1b088d7.jpg",
+    "index.html": "/vehicle_sticker_system/index.html",
+    "main.d63cb80e.css.map": "/vehicle_sticker_system/static/css/main.d63cb80e.css.map",
+    "main.0dcbe555.js.map": "/vehicle_sticker_system/static/js/main.0dcbe555.js.map",
+    "213.dd2511d3.chunk.js.map": "/vehicle_sticker_system/static/js/213.dd2511d3.chunk.js.map",
+    "455.031cc7da.chunk.js.map": "/vehicle_sticker_system/static/js/455.031cc7da.chunk.js.map",
+    "453.68d2f560.chunk.js.map": "/vehicle_sticker_system/static/js/453.68d2f560.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d63cb80e.css",
-    "static/js/main.7117204a.js"
+    "static/js/main.0dcbe555.js"
   ]
 }
